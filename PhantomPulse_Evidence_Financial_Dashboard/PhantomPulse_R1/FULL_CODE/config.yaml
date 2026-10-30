@@ -1,0 +1,20 @@
+# Central configuration for reproducible PhantomPulse runs.
+dates:
+  dev_start: "2026-06-04"
+  dev_end: "2026-09-02"
+  test_start: "2026-09-03"
+  test_end: "2026-09-30"
+ranking:
+  top_k: 20
+labels:
+  positive_types: [phantom, misplaced]
+  all_types: [phantom, misplaced, delisted]
+model:
+  name: HistGradientBoostingClassifier
+  max_iter: 120
+  learning_rate: 0.08
+  max_leaf_nodes: 15
+  l2_regularization: 2.0
+  random_state: 42
+financial_estimates:
+  default_recovery_rate: 0.60
